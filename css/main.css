@@ -1,0 +1,79 @@
+/* COMMON */
+body {
+  color: #333;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+img {
+  /* 이미지는 인라인 요소이기 때문에 알파벳이 베이스라인을 아래로 벗어나는 여백이 있다.
+  블록 요소로 바꾸면서 이 부분을 제거할 수 있고 깔끔하게 이미지가 붙게 된다. */
+  display: block; 
+}
+a {
+  text-decoration: none;
+}
+
+
+/* HEADER */
+header {
+  background-color: royalblue;
+  position: relative;
+}
+header .inner {
+  width: 1100px;
+  height: 120px;
+  margin: 0 auto;
+  background-color: orange;
+}
+header .logo {
+  height: 75px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+header .sub-menu {
+
+}
+header .sub-menu ul.menu {
+  font-family: Arial, sans-serif;
+  display: flex;  
+}
+header .sub-menu ul.menu li {
+  position: relative;
+}
+header .sub-menu ul.menu li::before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 12px;
+  background-color: #e5e5e5;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+header .sub-menu ul.menu li:first-child::before {
+  display: none;
+}
+header .sub-menu ul.menu li a {
+  font-size: 12px;
+  padding: 12px 16px;
+  display: block;
+  color: #656565;
+}
+header .sub-menu ul.menu li a:hover {
+  color: #000;
+}
+header .sub-menu .search {
+  
+}
+header .sub-menu .search input {
+
+}
+header .sub-menu .search .material-icons {
+
+}
