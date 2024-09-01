@@ -143,7 +143,7 @@ floatingObject('.floating3', 1.5, 20);
 
 
 
-// 
+// 스크롤하면서 선택자를 추가하여 css 애니메이션 적용 유도
 const spyEls = document.querySelectorAll('section.scroll-spy');
 spyEls.forEach(function (spyEl) {
   new ScrollMagic
@@ -155,3 +155,9 @@ spyEls.forEach(function (spyEl) {
     .setClassToggle(spyEl, 'show')
     .addTo(new ScrollMagic.Controller());
 });
+
+
+
+// 올해가 몇년도인가를 추가
+const thisYear = document.querySelector('.this-year');
+thisYear.textContent = new Date().getFullYear(); // 2024
