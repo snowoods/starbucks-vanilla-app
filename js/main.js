@@ -49,3 +49,15 @@ fadeEls.forEach(function (fadeEl, index) {
     opacity: 1
   });
 });
+
+
+// 스와이퍼
+// new Swiper(선택자, 옵션)
+new Swiper('.notice-line .swiper', {
+  direction: 'vertical',
+  loop: true,
+  autoplay: {
+    delay: 3000, // ms
+    disableOnInteraction: false,
+  },
+});
