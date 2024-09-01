@@ -110,7 +110,7 @@ new Swiper('.awards .swiper', {
   slidesPerView: 5,
   navigation: {
     prevEl: '.awards .swiper-prev',
-    prevEl: '.awards .swiper-next'
+    nextEl: '.awards .swiper-next'
   }
 })
 
