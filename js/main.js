@@ -17,6 +17,7 @@ searchInputEl.addEventListener('blur', function () {
 
 // 배너 사라지게 하는 기능
 const badgeEl = document.querySelector('header .badges');
+const toTopEl = document.querySelector('#to-top');
 
 window.addEventListener('scroll', _.throttle(function() {
   console.log(window.scrollY);
@@ -26,19 +27,38 @@ window.addEventListener('scroll', _.throttle(function() {
     gsap.to(badgeEl, .6, { // 0.6초간 opacity 0으로 변함.
       opacity: 0,
       display: 'none'
-    })
+    });
+
+    gsap.to(toTopEl, .2, {
+      x: 0  // px
+    });   
   }
   else {
     // 배지 보이기
     gsap.to(badgeEl, .6, {
       opacity: 1,
       display: 'block'
-    })
+    });
+
+    gsap.to(toTopEl, .2, {
+      x: 100  // px
+    });
   }
 }, 300)); // 300ms
 // _.throttle(함수, 시간ms)
 
 
+
+toTopEl.addEventListener('click', function () {
+  console.log('clicked to-top');
+  gsap.to(window, .7, {
+    scrollTo: 0
+  });
+});
+
+
+
+//----------
 
 // 순차적으로 이미지 나타나게하기
 const fadeEls = document.querySelectorAll('.visual .fade-in');
