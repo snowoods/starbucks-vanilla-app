@@ -124,3 +124,19 @@ function floatingObject(selector, delay, size) {
 floatingObject('.floating1', 1, 15);
 floatingObject('.floating2', .5, 15);
 floatingObject('.floating3', 1.5, 20);
+
+
+
+
+// 
+const spyEls = document.querySelectorAll('section.scroll-spy');
+spyEls.forEach(function (spyEl) {
+  new ScrollMagic
+    .Scene({
+      triggerElement: spyEl, // 보여짐 여부를 감시할 요소를 지정
+      // triggerHook 범위 : 뷰포트 상단 0 ~ 하단 1
+      triggerHook: .8 // 감시 요소가 뷰포트 기준 0.8 지점까지 올라오면 다음 함수 setClassToggle 호출.
+    })
+    .setClassToggle(spyEl, 'show')
+    .addTo(new ScrollMagic.Controller());
+});
