@@ -82,6 +82,21 @@ new Swiper('.promotion .swiper', {
   }
 })
 
+new Swiper('.awards .swiper', {
+  direction: 'horizontal',
+  autoplay: true,
+  loop: true,
+  spaceBetween: 30,
+  slidesPerView: 5,
+  navigation: {
+    prevEl: '.awards .swiper-prev',
+    prevEl: '.awards .swiper-next'
+  }
+})
+
+
+
+
 
 // 토글 프로모션
 const promotionEl = document.querySelector('.promotion');
